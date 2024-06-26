@@ -1,24 +1,27 @@
 // src/components/Header.tsx
 import React from "react";
+import { Box, Flex, Heading, Link } from "@chakra-ui/react";
 
 const Header: React.FC = () => {
 	return (
-		<header>
-			<h1>My Portfolio</h1>
-			<nav>
-				<ul>
-					<li>
-						<a href="#about">About</a>
-					</li>
-					<li>
-						<a href="#projects">Projects</a>
-					</li>
-					<li>
-						<a href="#contact">Contact</a>
-					</li>
-				</ul>
-			</nav>
-		</header>
+		<Box bg="teal.500" p={4} color="white">
+			<Flex justify="space-between" align="center">
+				<Heading as="h1" size="lg">
+					My Portfolio
+				</Heading>
+				<Flex>
+					<Link href="#about" mx={2}>
+						About
+					</Link>
+					<Link href="#projects" mx={2}>
+						Projects
+					</Link>
+					<Link href="#contact" mx={2}>
+						Contact
+					</Link>
+				</Flex>
+			</Flex>
+		</Box>
 	);
 };
 
